@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #fff;
+}
+.w{
+    width: 1065px;
+    margin:0 auto;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+section{
+    padding-top: 30px;
+    position: relative;
+}
+.section-top .position{
+    width: 680px;
+    border-bottom:3px solid #eeeeee; 
+    position: relative;
+}
+.section-top .position img{
+    display: inline-block;
+    width: 17px;
+    height: 15px;
+}
+.section-top .position span{
+    font-size: 10px;
+}
+.section-top .position>span:nth-of-type(1){
+    margin-left: 10px;
+    color: #b1b1b1;
+}
+.section-top .position>span:nth-of-type(2){
+    margin-left: 20px;
+}
+.section-top .position>span:nth-of-type(3){
+    color:#999999;
+}
+.section-top .position>span:nth-of-type(4){
+    color: #777777;
+}
+.section-top .position p{
+    line-height: 60px;
+    width: 135px;
+    display: block;
+    border-bottom: 3px solid #57bae8;
+    margin-bottom: -3px;
+}
+.section-top .position p span{
+    font-size: 18px;
+    font-weight: bold;
+}
+.position .img{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.position .img img{
+    width: 38px;
+    height: 26px;
+}
+.sponsor{
+    width:350px;
+    position: absolute;
+    right:0;
+    top: 50px;
+}
+.sponsor .sponsor_list{
+    width: 262px;
+    height: 340px;
+}
+.sponsor .sponsor_list .sponsor-head{
+    border-bottom: 1px solid #eeeeee;
+}
+.sponsor .sponsor_list .sponsor-head span{
+    display: inline-block;
+    margin-bottom: -1px;
+    border-bottom: 3px solid #57bae8;
+    font-size: 18px;
+    color: #3e4142;
+    line-height: 60px;
+}
+
+/* 搜索 */
+.list_pagination{
+    width: 680px;
+}
+.list_pagination_index{
+    height: 156px;
+    margin-top: 38px;
+}
+.list_pagination_index img{
+    width: 219px;
+    height: 156px;
+    float: left;
+}
+.count{
+    float: left;
+    margin-left: 25px;
+    width: 436px;
+}
+.count>div:first-child{
+    font-size: 16px;
+    color: #64686a;
+    font-weight: 700;
+}
+.count>div:nth-of-type(2) span:first-child{
+    font-size: 16px;
+    color: #60c0eb;
+}
+.count>div:nth-of-type(2) span:nth-of-type(2){
+    font-size: 16px;
+    color: #8a8a8a;
+}
+.count .time{
+    font-size: 16px;
+    color: #8a8a8a;
+    float: left;
+    margin: 10px 0px 10px 10px;
+}
+.time_1{
+    width: 70px;
+    height: 30px;
+    border-right:1px solid #ccc;
+    float: left;
+    margin: 10px 0px;
+}
+.count p{
+    font-size: 12px;
+    line-height: 25px;
+    width: 436px;
+    height: 70px;
+    clear: left;    
+}
+
+
+/* 分页 */
+.box1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

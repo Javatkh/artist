@@ -1,0 +1,94 @@
+/*阅读内容 区域*/
+.content-area{
+	width: 100%;
+}
+.content{
+	width: 1000px;
+	margin:0 auto;
+	overflow: hidden;
+}
+.position{
+	font-size: 12px;
+	color: #404040;
+	padding-left: 20px;
+	box-sizing: border-box;
+	margin:54px 0 38px 0;
+}
+.position a{
+	color: #404040;
+}
+/*内容左边区域*/
+.content-left{
+	float: left;
+	width: 680px;
+}
+.read-list-title{
+	overflow: hidden;
+}
+.read-list-title span:first-child{
+	font-size: 19px;
+	padding-bottom: 19px;
+	border-bottom:2px solid #5cbce9;
+	display: block;
+	float: left;
+}
+.read-list-title span:last-child{
+	font-size: 13px;
+	padding-bottom: 19px;
+	border-bottom:2px solid #eeeeee;
+	display: block;
+	width: calc(100% - 38px);
+	float: right;
+	line-height: 25px;
+	text-align: right;
+}
+.read-list-content{
+	padding:25px 0;
+	box-sizing: border-box;
+}
+.read-item{
+	overflow: hidden;
+	margin:30px 0;
+}
+.read-item-left{
+	float: left;
+	width: 220px;
+	height: 157px;
+}
+.read-item-left img{
+	width: 220px;
+	height: 157px;
+}
+.read-item-right{
+	float: left;
+	width: 435px;
+	margin-left: 25px;
+}
+.item-title{
+	font-size: 17px;
+	color: #484d4f;
+	font-weight: bold;
+}
+.item-date{
+	margin:11px 0;
+}
+.item-date span:first-child{
+	padding:0 18px 0 24px;
+	line-height: 32px;
+	font-size: 12px;
+	color: #6c6c6c;
+	border-right: 1px solid #e5e5e5;
+	box-sizing: border-box;
+}
+.item-date span:last-child{
+	padding-left:10px;
+	line-height: 32px;
+	font-size: 12px;
+	color: #6c6c6c;
+	box-sizing: border-box;
+}
+.item-forword{
+	line-height: 27px;
+	color: #7e7e7e;
+	font-size: 15px;
+}

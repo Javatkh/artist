@@ -1,0 +1,25 @@
+html, body, h1, h2, h3, h4, h5, h6, input, button, select, p, textarea, form, ul, li, ol, dt, dd, dl {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: '微软雅黑';
+  font-size: 14px;
+  color: #000; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 14px;
+  font-weight: normal; }
+
+ul, li, ol, dt, dd, dl {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #666; }
+
+i,em{
+  font-style: normal; }
+
+b, strong {
+  font-weight: normal; }

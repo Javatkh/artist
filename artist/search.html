@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文艺范, 就是这个范儿</title>
+    
+    <link rel="stylesheet" href="css/paging.css">
+    <link rel="shortcut icon" href="img/KV34BOLEpn.png"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/search.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/paging.js"></script>
+    <script src="js/interface.js"></script>
+</head>
+<body>
+    <!-- 头部 区域-->
+    <div class="header-area">
+        <div class="header">
+            <div class="header-left">
+                <a href="javascript:;">文艺范</a>
+                <a href="javascript:;">招商加盟</a>
+                <a href="javascript:;">IOS客户端</a>
+                <a href="javascript:;">Android客户端</a>
+                <a href="javascript:;">联系我们</a>
+                <a href="javascript:;">
+                    <img class="header-phone" src="img/phone.png" alt="">
+                    4008-900-800
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="collect.html">个人主页</a>
+                <a href="./login.html" target="_blank" class="login">登录</a>
+                <a href="./register.html" target="_blank" class="reg">注册</a>
+            </div>
+        </div>
+    </div>
+    <!-- navbar 区域 -->
+    <div class="navbar-area">
+        <div class="navbar">
+            <div class="navbar-left">
+                <div class="logo-mask">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="change-city">
+                    <div class="city-logo"></div>
+                    <div class="city">
+                        <span>北京</span>
+                        <a href="http://www.vko.cn/sitemap/index.html">【切换城市】</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-center">
+                <a href="index.html" class="index-avtive">首页</a>
+                <a href="read.html">阅读<span><img src="img/n.png" alt=""></span></a>
+                <a href="music.html">音乐</a>
+                <a href="movie.html">影视</a>
+                <a href="javascript:;">商品</a>
+            </div>
+            <div class="navbar-right">
+                <input type="text" onchange="dochange()" placeholder="请输入查找的内容">
+                <img onclick="dochange()" src="img/nav-search.png" alt="">
+            </div>
+        </div>
+    </div>
+    <section class="w">
+
+        <div class="section-top">
+            <div class="position">
+                <img src="image/main_active.png" alt="当前位置">
+                <span>当前位置：</span>
+                <span>文艺范</span>
+                <span>></span>
+                <span>搜索结果</span>
+                <!-- <p>搜索 <span>游戏</span> 的结果</p> -->
+                <div class="img">
+                    <img src="image/dingyue.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 广告赞助 -->
+        <div class="sponsor">
+            <div class="sponsor_list">
+                <div class="sponsor-head">
+                    <span>广告赞助</span>
+                </div>
+                <!-- 下面填写广告内容 -->
+            </div>
+            <!-- 第二个广告 -->
+            <div class="sponsor_list">
+                <div class="sponsor-head">
+                    <span>广告赞助</span>
+                </div>
+            </div>
+        </div>
+        <!-- 搜索部分 -->
+        <div class="list_pagination">
+            <!-- <div class="list_pagination_index" id="box">
+                <img src="image/default_indi_bg.png" alt="">
+                <div class="count">
+                    <div class="title">
+                        儿童的<span>的</span> 作者/神数字
+                    </div>
+                    <div>
+                        <div class="time_1">
+                            <span>//</span> 
+                            <span>TAG:</span>
+                        </div>
+                        <span class="time">2017年06月15日</span>
+                    </div>
+                    <p>
+                        (一) 从小我不擅长游戏，小孩子间风行的种种玩法，但凡需要一点技巧，火药做些脑筋的，绝大多数都玩得一般。有时连一半都不算，真差劲。
+                    </p>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- 分页 -->
+        <div class="box1" id="box"></div>
+    </section>
+
+    <!-- footer 区域 -->
+    <div class="footer-area">
+        <div class="footer">
+            <div class="footer-title">文艺范</div>
+            <div class="about">
+                <a href="about.html">关于</a>|
+                <a href="javascript:;">用户协议</a>|
+                <a href="javascript:;">联系我们</a>
+            </div>
+            <div class="website-title">本站为文艺范官方网站</div>
+            <div class="icp-title">浙ICP备1500041号</div>
+        </div>
+    </div>
+    <script src="js/search.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        //从缓存中拿到其他页面传进来的input的值 
+        var val = localStorage.iptValue
+        // 给input添加一个属性节点
+        $("input").attr("value",val)
+        
+        var value = $("input").val()
+        // 若属性值不为空，调取方法
+        if(value != ""){
+            dochange()
+        }
+
+
+        //搜索 监测input的变化，回车获取当前值
+        function dochange(){
+            // 重新获取input  value  这里是改变p标签里面的值
+            var value = $("input").val()
+            
+            // 判断input里面的值
+            if(value != undefined && value != ""){
+                // 先删除之前的节点
+                $(".position p").remove();
+
+                // 显示搜索的关键字
+                var p = document.createElement('p');
+                p.innerHTML = `
+                    搜索 <span>${value}</span> 的结果
+                `
+                $(".position").append(p);
+            }
+            if(value == ""){
+                $(".position p").remove();
+            }
+            // 调用search搜索函数   回车搜索首先显示第一页数据，传进去页码为1
+            downloadData(currentPage)
+        }
+
+
+
+        // 当前页数
+        var currentPage = 1;
+
+        // 一页显示的数量  
+        var count = 5;
+
+        // 总页数  默认为0
+        var pageCount = 0;
+
+        // 请求搜索接口  形参为页码，从分页器那里获取  当第一次加载页面时，在执行函数时传进来一个currentPage = 1;
+        function downloadData (page) {
+            // 把熊分页器那里拿到的page赋给currentPage
+            currentPage = page
+            
+            // 定义url中的start  也就是第几页  接口是从start=0开始,第二页的start=5,第三页start=15,也就是(current - 1)*count 
+            var start = (currentPage - 1)*count
+            // 重新获取input  value 这里是为了在搜索页面再次搜索用
+            var value = $("input").val()
+
+             // 获取list
+             var liPagination = $(".list_pagination")
+            // 获取url  count：页数  start:开始页数  keyword：搜索关键字
+            var url = searchUrl+"&start="+(page-1)*count+"&count="+count+"&keyword="+value
+            
+            // 数据请求
+            $.getJSON(url,{},function (data) {
+                
+                // 成功之后先把liPagination节点删除，再放进去新的数据
+                $(".list_pagination_index").remove();
+                // 数据成功，遍历数据放在节点中
+                for(var item of data.data){
+                    // console.log(item.id)
+                    var li = document.createElement('li');
+
+                    li.innerHTML = `<div id="${item.id}" class="list_pagination_index" id="box">
+                                        <img src="${imagePrefix}${item.img_url}" alt="">
+                                        <div class="count">
+                                            <div class="title">
+                                                ${item.title}
+                                            </div>
+                                            <div>
+                                                <div class="time_1">
+                                                    <span>//</span> 
+                                                    <span>TAG:</span>
+                                                </div>
+                                                <span class="time">${item.post_date}</span>
+                                            </div>
+                                            <p>
+                                                ${item.forward}    
+                                            </p>
+                                        </div>
+                                    </div>
+                                    `
+                    //把节点一个个放在网页中 
+                    liPagination.append(li);
+                }
+                
+
+                // 拿到数据中的总数
+                var total = data.total
+
+                // 通过ceil向上取整得到总页数  pageCount为前面的全局变量
+                pageCount = Math.ceil(total / count)
+                
+                // 分页
+                $('.box1').paging({
+                    initPageNo: currentPage, // 初始页码  初始值为1
+                    totalPages: pageCount, //总页数 总页数在data数据中得到
+                    slideSpeed: 600, // 缓动速度。单位毫秒
+                    // jump: true, //是否支持跳转
+                    callback: function(page) { // 回调函数
+                        
+                        // 因为分页器一直处于数据请求函数中，而downloadData()函数传进来的page直接赋给了currentPage，
+                        // 在downloadData()函数中，page一直等于currentPage，就会一直请求数据下载
+                        //因此当page和当前页相同时退出，不执行downloadData(), 避免多次下载数据
+                        if(page == currentPage){
+                            return
+                        }
+                        // console.log(page)
+                        // 重新获取数据  调用search搜索函数  把页码传出去
+                        downloadData(page)
+                    }
+                });
+
+                $('.list_pagination_index').click((e)=>{
+                    sessionStorage.id = e.currentTarget.id
+                    location.href = "readDetail.html"
+                })
+            })
+        }
+		downloadData(currentPage)
+        
+
+        
+    </script>
+</body>
+</html>

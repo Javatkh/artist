@@ -1,0 +1,221 @@
+/*header*/
+.team-html-header .header-area{
+    background: #4b4c4e;
+}
+.team-html-header .header{
+    width: 1213px;
+    height: 42px;
+    margin:0 auto;
+}
+.team-html-header .header-left{
+    float: left;
+}
+.team-html-header .header-left a{
+    line-height: 42px;
+    color: #cacaca;
+    font-size: 15px;
+    padding:0 23px;
+    box-sizing: border-box;
+}
+.team-html-header .header-right{
+    float: right;
+}
+.team-html-header .header-right a{
+    line-height: 42px;
+    color: #cacaca;
+    font-size: 15px;
+    padding:0 23px;
+    box-sizing: border-box;
+}
+.team-html-header .header-right a:first-child{
+    color: #fee900;
+    display: none;
+}
+.team-html-header .header-right a:last-child{
+    border-left:1px solid #6b6b6b;
+}
+.team-html-header .header-phone{
+    width: 12px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+
+
+
+/*navbar*/
+.team-html-header .navbar-area{
+    background: #fff;
+    border-top:1px solid #e3e3e3;
+    border-bottom:1px solid #e3e3e3;
+}
+.team-html-header .navbar{
+    width: 1183px;
+    height: 102px;
+    padding-left:25px;
+    margin:0 auto;
+    box-sizing: border-box;
+}
+.team-html-header .navbar-left{
+    position: relative;
+    float: left;
+}
+.team-html-header .logo-mask{
+    width: 200px;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    left:0;
+    top:35px;
+}
+.team-html-header .logo{
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+.team-html-header .logo img{
+    width: 200px;
+    height: 200px;
+    margin-top:-70px;
+}
+
+.team-html-header .change-city{
+    float: left;
+    margin-top:30px;
+    margin-left: 200px;
+    padding:0 20px 0 10px;
+    border-left:1px solid #d9d9d9;
+}
+.team-html-header .city-logo{
+    width: 95px;
+    height: 15px;
+    background: url(../img/qczs.png);
+    margin-bottom:6px;
+}
+.team-html-header .city span{
+    color: #666;
+    font-weight: bold;
+}
+.team-html-header .city a{
+    color: #979797;
+    font-size: 13px;
+}
+.team-html-header .navbar-center{
+    margin-top:30px;
+    float: left;
+}
+.team-html-header .navbar-center a{
+    font-size: 18px;
+    color: #3a3a3a;
+    padding:0 30px;
+}
+.team-html-header .navbar-center .index-avtive{
+    color: #00a0e9;
+    font-weight: bold;
+}
+.team-html-header .navbar-center a:hover{
+    color: #00a0e9;
+    font-weight: bold;
+}
+.team-html-header .navbar-right{
+    float: right;
+    width: 240px;
+    height: 40px;
+    border: 2px solid #d5dce2;
+    margin-top:30px;
+    position: relative;
+}
+.team-html-header .navbar-right input{
+    float: left;
+    width: 200px;
+    height: 40px;
+    border:0;
+    outline: none;
+    margin-left:8px;
+    color:#696969;
+}
+.team-html-header .navbar-right img{
+    float: right;
+    margin-right: 5px;
+    margin-top:10px;
+}
+.team-html-header .search-result{
+    position: absolute;
+    top:42px;
+    left:-2px;
+    z-index:1;
+    width:100%;
+    border: 2px solid #d5dce2;
+    border-top:0;
+    background:#fff;
+    display:none;
+}
+.team-html-header .search-result.search-result-show{
+    display:block;
+}
+.team-html-header .search-result >ul{
+    padding:10px;
+}
+.team-html-header .search-result >ul li{
+    width:100%;
+    height:30px;
+    line-height:30px;
+    padding:8px 0px;
+    cursor: pointer;
+}
+.team-html-header .search-result >ul li:hover{
+    background:#EEE;
+    opacity:0.9;
+    cursor:pointer;
+}
+.team-html-header .search-result >ul li>*{
+    display:inline-block;
+    vertical-align: middle;
+}
+.team-html-header .search-result >ul li>img{
+    width:30px;
+    min-height:30px;
+    margin:0;
+}
+.team-html-header .search-result >ul li span{
+    width:80%;
+    height:30px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+
+
+
+/*footer区域*/
+.footer-area{
+    background: #252525;
+}
+.footer{
+    width: 1000px;
+    margin:0 auto;
+    padding:35px 0;
+    box-sizing: border-box;
+}
+.footer-title{
+    margin:0px 0 22px 0;
+    color: #adadad;
+    font-size: 16px;
+}
+.about{
+
+}
+.about a{
+    font-size: 12px;
+    color: #adadad;
+    padding:0 6px;
+}
+.website-title{
+    margin:15px 0;
+    color: #616161;
+    font-size: 12px;
+}
+.icp-title{
+    color: #adadad;
+}

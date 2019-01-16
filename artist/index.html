@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/KV34BOLEpn.png"/>
+    <!-- 初始样式CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- swiper的样式 -->
+    <link rel="stylesheet" href="./css/swiper.min.css">
+
+
+    <!-- index.css -->
+    <link rel="stylesheet" href="./css/mh.index.css">
+    <!-- 页面头部css -->
+    <link rel="stylesheet" href="./css/mh.header.css">
+
+    <title>文艺范 - 就有范~</title>
+</head>
+<body>
+<div class="team-html-header">
+    <!-- 头部 区域-->
+    <div class="header-area">
+        <div class="header">
+            <div class="header-left">
+                <a href="./index.html">文艺范</a>
+                <a href="javascript:;">招商加盟</a>
+                <a href="javascript:;">IOS客户端</a>
+                <a href="javascript:;">Android客户端</a>
+                <a href="javascript:;">联系我们</a>
+                <a href="javascript:;">
+                    <img class="header-phone" src="./img/phone.png" alt="">
+                    4008-900-800
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="collect.html">个人主页</a>
+                <a href="./login.html" target="_blank" class="login">登录</a>
+                <a href="./register.html" target="_blank" class="reg">注册</a>
+            </div>
+        </div>
+    </div>
+    <!-- navbar 区域 -->
+    <div class="navbar-area">
+        <div class="navbar">
+            <div class="navbar-left">
+                <div class="logo-mask">
+                    <div class="logo">
+                        <a href="./index.html"><img src="./img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="change-city">
+                    <div class="city-logo"></div>
+                    <div class="city">
+                        <span>北京</span>
+                        <a href="http://www.vko.cn/sitemap/index.html">【切换城市】</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-center">
+                <a href="./index.html" class="index-avtive">首页</a>
+                <a href="./read.html">
+                    阅读
+                    <span>
+                        <img src="./img/n.png" alt="">
+                    </span>
+                </a>
+                <a href="./music.html">音乐</a>
+                <a href="./movie.html">影视</a>
+                <a href="javascript:;">商品</a>
+            </div>
+            <!-- 首页搜索页 -->
+            <div class="navbar-right">
+                <input type="text" placeholder="请输入查找的内容" id="search_inp">
+                <a href="search.html">
+                <img src="./img/nav-search.png" alt="">
+                </a>
+                <!-- <div class="search-result">
+                    正在搜索中...
+                    <ul>
+                        <li>
+                            <img src="img/7daadcc6284080a7.gif" alt="">
+                            <div>213421eeeeeeeeeeeee34</div>
+                        </li>
+                    </ul>
+                </div> -->
+               <!--  <script type="text/html" id="search-txt">
+                    <ul>
+                        <% for(var item of data){ %>
+                        <li id="<%=item.id%>" data-to="<%=item.urlTo%>" class="after">
+                            <span><%=item.title%></span>
+                            <img src="http://127.0.0.1/project/artist-v3/<%=item.img_url %>" alt="">
+                        </li>
+                        <% } %>
+                    </ul>
+                </script> -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mh-content">
+    <main class="after">
+        <!-- 首页主体左边内容 -->
+        <div class="main-sub left">
+            <div class="mh-borad-index">
+                <!-- 轮播图 -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide">
+                            <img src="img/aliwx_common_back_btn_normal.png" alt="">
+                        </div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div> -->
+                    </div>
+                    <script type="text/html" id="index-broad">
+                        <% for(item of data){ %>
+                        <div class="swiper-slide" id="<%=item.id%>" data-to="<%=item.urlTo%>">
+                            <img data-src="http://127.0.0.1/project/artist-v3/<%=item.img_url %>" alt="" class="swiper-lazy">
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                        <% } %>
+                    </script>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!-- 首页阅读 -->
+            <div class="index-sub read">
+                <div class="title">
+                    <div class="txt">阅读<span class="b-bottom"></span></div>
+                    <a href="read.html" class="more">更多</a>
+                </div>
+                <div class="sub-content after">
+                    <div class="left sub-content-read-left">
+                        正在加载中...
+                        <!-- <img src="img/7daadcc6284080a7.gif" alt="" class="title-img">
+                        <p class="title">即时十八岁我还要谈恋爱</p>
+                        <div class="sub-info">
+                            <div class="full-user">阅读</div>
+                            <div class="full-user center">2018-9-18 12:09</div>
+                            <div class="full-user">查看：999次</div>
+                        </div>
+                        <p class="keyword">人生，不论到了什么时候都要从当下做起</p> -->
+                    </div>
+                    <script type="text/html" id="sub-content-read-left">
+                        <img src="http://127.0.0.1/project/artist-v3/<%=data[0].img_url %>" alt="" class="title-img" id="<%=data[0].id%>">
+                        <p class="title"><%=data[0].title %></p>
+                        <div class="sub-info">
+                            <div class="full-user">阅读</div>
+                            <div class="center"><%=data[0].post_date %></div>
+                            <div class="full-user">查看：<%=data[0].like_count %>次</div>
+                        </div>
+                        <p class="keyword">人生，不论到了什么时候都要从当下做起</p>
+                    </script>
+                    <div class="right">
+                        <ul class="right_read sub-content-read-right">
+                            <!-- <li>
+                                <img src="img/7daadcc6284080a7.gif" alt="">
+                                <div class="right">
+                                    <p class="title">STORY | 天才</p>
+                                    <p class="txt"></p>
+                                </div>
+                            </li> -->
+                        </ul>
+                        <script type="text/html" id="sub-content-read-right">
+                            <% for(var i = 1;i<=4;i++){ %>
+                            <li id="<%=data[i].id%>">
+                                <img src="http://127.0.0.1/project/artist-v3/<%=data[i].img_url %>" alt="" class="title-img">
+                                <div class="right">
+                                    <p class="title"><%=data[i].title%></p>
+                                    <p class="txt"><%=data[i].forward%></p>
+                                </div>
+                            </li>
+                            <% } %>
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- 首页音乐 -->
+            <div class="index-sub music">
+                <div class="title">
+                    <div class="txt">音乐<span class="b-bottom"></span></div>
+                    <a href="music.html" class="more">更多</a>
+                </div>
+                <div class="sub-content after">
+                    <div class="left sub-content-music-left">
+                        正在加载中...
+                        <!-- <img src="img/7daadcc6284080a7.gif" alt="" class="title-img">
+                        <p class="title">即时十八岁我还要谈恋爱</p>
+                        <div class="sub-info">
+                            <div class="full-user">阅读</div>
+                            <div class="full-user center">2018-9-18 12:09</div>
+                            <div class="full-user">查看：999次</div>
+                        </div>
+                        <p class="keyword">人生，不论到了什么时候都要从当下做起</p> -->
+                    </div>
+                    <script type="text/html" id="sub-content-music-left">
+                        <img src="http://127.0.0.1/project/artist-v3/<%=data[0].img_url %>" alt="" class="title-img" id="<%=data[0].id%>">
+                        <p class="title"><%=data[0].title %></p>
+                        <div class="sub-info">
+                            <div class="full-user">音乐</div>
+                            <div class="center"><%=data[0].post_date %></div>
+                            <div class="full-user">查看：<%=data[0].like_count %>次</div>
+                        </div>
+                        <p class="keyword">人生，不论到了什么时候都要从当下做起</p>
+                    </script>
+                    <div class="right">
+                        <ul class="right_read sub-content-music-right">
+                            <!-- <li>
+                                <img src="img/7daadcc6284080a7.gif" alt="">
+                                <div class="right">
+                                    <p class="title">STORY | 天才</p>
+                                    <p class="txt">人生人生人生人生人生人生人生人生人生人生人生人生人生</p>
+                                </div>
+                            </li> -->
+                        </ul>
+                        <script type="text/html" id="sub-content-music-right">
+                            <% for(var i = 1;i<=4;i++){ %>
+                            <li id="<%=data[0].id%>">
+                                <img src="http://127.0.0.1/project/artist-v3/<%=data[i].img_url %>" alt="" class="title-img">
+                                <div class="right">
+                                    <p class="title"><%=data[i].title%></p>
+                                    <p class="txt"><%=data[i].forward%></p>
+                                </div>
+                            </li>
+                            <% } %>
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- 首页影视 -->
+            <div class="index-sub music">
+                <div class="title">
+                    <div class="txt">影视<span class="b-bottom"></span></div>
+                    <a href="movie.html" class="more">更多</a>
+                </div>
+                <div class="sub-content after sub-content-movie">
+                    正在加载中...
+                    <!-- <div class="movie-sub-content">
+                        <img src="./img/7daadcc6284080a7.gif" alt="">
+                        <div class="movie-info">
+                            <p>人间失格</p>
+                            <p>影视</p>
+                        </div>
+                    </div>
+                    <div class="movie-sub-content">
+                        <img src="./img/7daadcc6284080a7.gif" alt="">
+                        <div class="movie-info">
+                            <p>人间失格</p>
+                            <p>影视</p>
+                        </div>
+                    </div> -->
+                </div>
+                <script type="text/html" id="sub-content-movie-min">
+                    <% for(var i = 0;i<=1;i++){ %>
+                    <div class="movie-sub-content">
+                        <img src="http://127.0.0.1/project/artist-v3/<%=data[i].img_url %>" alt="" id="<%=data[0].id%>">
+                        <div class="movie-info">
+                            <p><%=data[i].subtitle%></p>
+                            <p>影视</p>
+                        </div>
+                    </div>
+                    <% } %>
+                </script>
+            </div>
+            <!-- 首页推荐 -->
+            <div class="index-sub recommend">
+                <div class="title">
+                    <div class="txt">推荐<span class="b-bottom"></span></div>
+                    <a href="javascript:;" class="more">更多</a>
+                </div>
+                <div class="sub-content after sub-content-recommend">
+                    正在加载中...
+                    <!-- <div class="content-recommend-sub">
+                        <img src="img/7daadcc6284080a7.gif" alt="">
+                        <div class="info-recommend">
+                            <p class="title">ewrewqr</p>
+                            <p class="txt">qwerewqrqwerewqrqwerwqqwerewqrqwerewqrqwerwq</p>
+                        </div>
+                    </div> -->
+                </div>
+                <script type="text/html" id="sub-content-recommend">
+                    <%for(var i = 0;i<data.length;i++){ %>
+                    <div class="content-recommend-sub">
+                        <img src="http://127.0.0.1/project/artist-v3/<%=data[i].img_url %>" alt="" id="<%=data[i].id%>" data-to="<%=data[i].urlTo%>">
+                        <div class="info-recommend">
+                            <p class="title"><%=data[i].title%></p>
+                            <p class="txt"><%=data[i].forward%></p>
+                        </div>
+                    </div>
+                    <% } %>
+                </script>
+            </div>
+        </div>
+        <!-- 首页主体右侧内容 -->
+        <div class="main-sub right">
+            <p class="right-sub-title">
+                <span class="title">推荐<span></span></span>
+            </p>
+            <!-- 首页排行 -->
+            <div class="sub-rank">
+                <div class="rank-btn-all">
+                    <div class="rank-btn active">周排行</div>
+                    <div class="rank-btn">月排行</div>
+                    <div class="rank-btn">总排行</div>
+                </div>
+                <div class="rank-view-all">
+                    正在加载中...
+                    <!-- <div class="rank-view active">
+                        <div class="rank-view-sub">
+                            <div class="rank-view-sub-num">1</div>
+                            <span>11111111</span>
+                        </div>
+                    </div> -->
+                </div>
+                <script type="text/html" id="rank-view-result">
+                    <%for(var i=0;i<data.length;i++){%>
+                    <div class="rank-view">
+                        <%for(var a=0;a<data[i].length;a++){%>
+                        <div class="rank-view-sub" id="<%=data[i][a].id%>" data-to="<%=data[i][a].urlTo%>">
+                            <div class="rank-view-sub-num"><%=a + 1%></div>
+                            <span><%=data[i][a].title%></span>
+                        </div>
+                        <% } %>
+                    </div>
+                    <% } %>
+                </script>
+            </div>
+            <!-- 首页推荐 -->
+            <p class="right-sub-title">
+                <span class="title">首页推荐<span></span></span>
+            </p>
+            <ul class="recommend-index">
+                正在加载中...
+                <!-- <li>
+                    <p class="title">很多想做的事情不知道怎么做</p>
+                    <p class="content-sub">很多想做的事情不知道怎么做很多想做的事情不知道怎么做很多想做的事情不知道怎么做</p>
+                </li> -->
+            </ul>
+            <script type="text/html" id="recommend-index-view">
+                <%for(var i=0;i<data.length;i++){%>
+                <li id="<%=data[i].id%>" data-to="<%=data[i].urlTo%>">
+                    <p class="title"><%=data[i].title%></p>
+                    <p class="content-sub"><%=data[i].forward%></p>
+                </li>
+                <% } %>
+            </script>
+            <!-- 首页音乐随机推荐 -->
+            <p class="right-sub-title">
+                <span class="title">音乐推荐<span></span></span>
+            </p>
+            <ul class="music-recommend-index">
+                正在加载中...
+                <!-- <li>
+                    <img src="img/7daadcc6284080a7.gif" alt="">
+                    <p class="title">虎口脱险  老狼</p>
+                    <div class="info">
+                        <div class="sub-info">音乐</div>
+                        <div class="center">2016-09-09 12:00:00</div>
+                        <div class="sub-info">点击：999</div>
+                    </div>
+                </li> -->
+            </ul>
+            <script type="text/html" id="recommend-music-view">
+                <%for(var i=0;i<data.length;i++){%>
+                <li id="<%=data[i].id%>">
+                    <img src="http://127.0.0.1/project/artist-v3/<%=data[i].img_url %>" alt="">
+                    <p class="title"><%=data[i].title%></p>
+                    <div class="info">
+                        <div class="sub-info">音乐</div>
+                        <div class="center"><%=data[i].post_date%></div>
+                        <div class="sub-info">点击：<%=data[i].like_count%></div>
+                    </div>
+                </li>
+                <% } %>
+            </script>
+        </div>
+    </main>
+    <!-- 友情链接 -->
+    <main class="after">
+        <div class="friendLink">
+            <p class="title">
+                <span class="title-txt">友情链接
+                    <span class="bottom-blue"></span>
+                </span>
+            </p>
+            <ul class="friendLink-sub-all after">
+                <li><a href="http://m.artist.haoheao.cn">手机文艺范</a></li>
+                <li><a href="http://haoheao.cn">HaoHeao</a></li>
+                <li><a href="javascript:;">计算器在线</a></li>
+                <li><a href="javascript:;">衣故事</a></li>
+                <li><a href="javascript:;">青果</a></li>
+                <li><a href="javascript:;">片段</a></li>
+                <li><a href="javascript:;">洛氏</a></li>
+                <li><a href="javascript:;">逗比妹</a></li>
+                <li><a href="javascript:;">阿里巴巴</a></li>
+                <li><a href="javascript:;">京东</a></li>
+                <li><a href="javascript:;">4399网络</a></li>
+                <li><a href="javascript:;">浙江游讯科技</a></li>
+                <li><a href="javascript:;">360安全大师</a></li>
+                <li><a href="javascript:;">腾讯电脑管家</a></li>
+                <li><a href="javascript:;">2345电脑管家</a></li>
+                <li><a href="javascript:;">迅游网</a></li>
+                <li><a href="javascript:;">百度之家</a></li>
+                <li><a href="javascript:;">红警之家</a></li>
+                <li><a href="javascript:;">百度翻译</a></li>
+            </ul>
+        </div>
+    </main>
+</div>
+<!-- footer 区域 -->
+<div class="footer-area">
+    <div class="footer">
+        <div class="footer-title">文艺范</div>
+        <div class="about">
+            <a href="about.html">关于</a>
+            <a href="user.html">用户协议</a>
+            <a href="about.html">联系我们</a>
+        </div>
+        <div class="website-title">本站为文艺范官方网站</div>
+        <div class="icp-title">浙ICP备1500041号</div>
+    </div>
+</div>
+</body>
+<!-- API -->
+<!-- <script src="./js/mh.interface.js"></script> -->
+<script src="./js/interface.js"></script>
+<!-- jQuery.js -->
+<script src="./js/jquery.min.js"></script>
+<script src="./js/swiper.min.js"></script>
+<!-- baiduTemplate -->
+<script src="./js/baiduTemplate.js"></script>
+<!-- 首页主体js -->
+<script src="./js/mh.index.js"></script>
+<script>
+
+</script>
+</html>

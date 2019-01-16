@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文艺范, 就是这个范儿</title>
+	<link rel="shortcut icon" href="img/KV34BOLEpn.png"/>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/paging.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/read.css">
+</head>
+<body>
+	<!-- 头部 区域-->
+	<div class="header-area">
+		<div class="header">
+			<div class="header-left">
+				<a href="javascript:;">文艺范</a>
+				<a href="javascript:;">招商加盟</a>
+				<a href="javascript:;">IOS客户端</a>
+				<a href="javascript:;">Android客户端</a>
+				<a href="javascript:;">联系我们</a>
+				<a href="javascript:;">
+					<img class="header-phone" src="img/phone.png" alt="">
+					4008-900-800
+				</a>
+			</div>
+			<div class="header-right">
+				<a href="collect.html">个人主页</a>
+				<a href="./login.html" target="_blank" class="login">登录</a>
+                <a href="./register.html" target="_blank" class="reg">注册</a>
+			</div>
+		</div>
+	</div>
+	<!-- navbar 区域 -->
+	<div class="navbar-area">
+		<div class="navbar">
+			<div class="navbar-left">
+				<div class="logo-mask">
+					<div class="logo">
+						<a href="index.html"><img src="img/logo.png" alt=""></a>
+					</div>
+				</div>
+				<div class="change-city">
+					<div class="city-logo"></div>
+					<div class="city">
+						<span>北京</span>
+						<a href="http://www.vko.cn/sitemap/index.html">【切换城市】</a>
+					</div>
+				</div>
+			</div>
+			<div class="navbar-center">
+				<a href="index.html">首页</a>
+				<a href="read.html" class="index-avtive">阅读<span><img src="img/n.png" alt=""></span></a>
+				<a href="music.html">音乐</a>
+				<a href="movie.html">影视</a>
+				<a href="javascript:;">商品</a>
+			</div>
+			<div class="navbar-right">
+                <input id="search_inp" onchange="doChange()" type="text" placeholder="请输入查找的内容">
+                <a href="search.html"><img onclick="doChange()" src="img/nav-search.png" alt=""></a>
+            </div>
+		</div>
+	</div>
+	<!-- 阅读内容 区域 -->
+	<div class="content-area">
+		<div class="content">
+			<div class="position">
+				当前位置：<a href="index.html">首页</a>><a href="read.html">阅读</a>
+			</div>
+			<div class="content-left">
+				<div class="read-list-title">
+					<span>文章</span>
+					<span>订阅</span>
+				</div>
+				<div class="read-list-content">
+					<!-- <div class="read-item">
+						<div class="read-item-left">
+							<img src="img/rotation.jpg" alt="">
+						</div>
+						<div class="read-item-right">
+							<div class="item-title">
+								<span>月回复</span>
+								<span>作者/李了</span>
+							</div>
+							<div class="item-date">
+								<span>TAG:</span>
+								<span>2018:12:24</span>
+							</div>
+							<div class="item-forword">
+								哇哇哇哇哇哇哇
+							</div>
+						</div>
+					</div> -->
+				</div>
+				<!-- 分页 -->
+				<div class="list_pagination">
+					<div class="box1" id="box"></div>
+				</div>
+			</div>
+			<div class="content-right">
+				<div class="recommend-title">
+					<span>推荐图文</span>
+					<span>&nbsp;</span>
+				</div>
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+						<!-- <div class="recommend-img">
+							<img src="img/defaultpic.gif" alt="">
+							<div class="recommend-img-title">
+								<span>昨日花园 作者/三三</span>
+								<span>文章</span>
+							</div>
+						</div> -->
+				    </div>
+				</div>
+				<!-- 排行选项卡 -->
+				<div class="ranking">
+					<div class="ranking-button">
+						<span>周排行</span>
+						<span>月排行</span>
+						<span>总排行</span>
+					</div>
+					<div class="ranking-list">
+						<div class="ranking-list-content ranking-week-content">
+							<!-- <div class="ranking-week">
+								<span>1</span>
+								<span>而非打开附件打开</span>
+							</div> -->
+						</div>
+						<div class="ranking-list-content ranking-month-content"></div>
+						<div class="ranking-list-content ranking-all-content"></div>
+					</div>
+				</div>
+				<!-- 随机推荐 -->
+				<div class="random">
+					<div class="recommend-title">
+						<span>随机推荐</span>
+						<span>&nbsp;</span>
+					</div>
+					<div class="random-comtent">
+						<!-- <div class="recommendation">
+							<div class="recommendation-title">
+								<span>我我我</span>
+								<span>作者/你你你</span>
+							</div>
+							<div class="recommendation-content">
+								妮妮哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇
+							</div>
+						</div>-->				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer 区域 -->
+	<div class="footer-area">
+		<div class="footer">
+			<div class="footer-title">文艺范</div>
+			<div class="about">
+				<a href="about.html">关于</a>|
+				<a href="javascript:;">用户协议</a>|
+				<a href="javascript:;">联系我们</a>
+			</div>
+			<div class="website-title">本站为文艺范官方网站</div>
+			<div class="icp-title">浙ICP备1500041号</div>
+		</div>
+	</div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/paging.js"></script>
+	<script src="js/interface.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/swiper.min.js"></script>
+
+	<script>
+		var currentPage = 1;
+		var count = 10;
+		var pageCount = 0;
+
+		// 阅读列表数据
+		function downReadList(page) {
+
+			currentPage = page
+			var start = (currentPage - 1)*count
+
+			var url = readListUrl+"&start="+start+"&count="+count
+			$.getJSON(url,function(response) {
+
+				var total = response.total
+				pageCount = Math.ceil(total / count)
+
+
+				var list = response.data;
+				// console.log(list)
+				var html = ""
+				for(var index in list) {
+					var item = list[index];
+
+					html += `<div id="${item.id}" class="read-item">
+								<div class="read-item-left">
+									<img src="${imagePrefix}${item.img_url}" alt="">
+								</div>
+								<div class="read-item-right">
+									<div class="item-title">
+										<span>${item.title}</span>
+										<span>作者/${item.author_name}</span>
+									</div>
+									<div class="item-date">
+										<span>TAG:</span>
+										<span>${item.post_date}</span>
+									</div>
+									<div class="item-forword">
+										${item.forward}
+									</div>
+								</div>
+							</div>`
+				}
+
+				$(".read-list-content").html(html)
+
+
+				//分页
+				$('#box').paging({
+				    initPageNo: currentPage, // 初始页码
+				    totalPages: pageCount, //总页数
+				    slideSpeed: 600, // 缓动速度。单位毫秒
+				    // jump: true, //是否支持跳转
+				    callback: function(page) { // 回调函数
+				    	
+				    	if(page == currentPage){
+				    		return
+				    	}
+
+				        downReadList(page)
+				    }
+				});
+
+				//绑定点击
+				$(".read-list-content .read-item").on("click", function(event) {
+					var id = event.currentTarget.id
+					console.log("id = " + id)
+
+					sessionStorage.id = id
+					location.href = "readDetail.html"
+				})
+
+				//轮播图数据
+				function downLoadRecommendListUrl() {
+		
+					var url = recommendListUrl
+		
+					$.getJSON(url,function(response) {
+		
+						var list = response.data;
+						
+						var pageName ="" 
+						
+						var html = ""
+						for(var index in list) {
+							var item = list[index];
+							var pageType = ''
+							if (item.category == '1') {
+								pageType = "阅读"
+							} else if (list[index].category == '4') {
+								pageType = "音乐"
+							} else if (list[index].category == '5') {
+								pageType = "影视"
+							}
+		
+							html += `<div class="recommend-img swiper-slide">
+										<img id="${item.id}" src="${imagePrefix}${item.img_url}" alt="">
+										<div class="recommend-img-title">
+											<span class='randm-list-title'>${item.title}</span>
+											<span>${pageType}</span>
+										</div>
+									</div>`
+						}
+		
+						$(".swiper-wrapper").html(html)
+		
+						var itemList = $(".swiper-wrapper img")
+						itemList.each(function(index,ele){
+							$(ele).on("click",function(){
+								event.stopPropagation();
+								if (list[index].category == '1') {
+									pageName = "readDetail.html"
+								} else if (list[index].category == '4') {
+									pageName = "musicDetail.html"
+								} else if (list[index].category == '5') {
+									pageName = "movieDetail.html"
+								}
+							})
+						})
+						//绑定点击
+						$(".swiper-wrapper img").on("click", function(event) {
+							event.stopPropagation();
+							var id = event.currentTarget.id
+							sessionStorage.id = id
+							location.href = pageName
+						})
+		
+		
+						// 轮播图
+						var swiper = new Swiper('.swiper-container', {
+							loop: true,
+							autoplay: {
+								delay: 2500,
+								disableOnInteraction: false
+							}
+						});
+		
+					})
+		
+		
+				}
+				downLoadRecommendListUrl()
+			})
+		}
+		downReadList(currentPage)
+
+
+	
+
+	</script>
+</body>
+</html>

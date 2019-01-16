@@ -1,0 +1,51 @@
+.footer-area{
+    margin-top:60px;
+}
+section{
+    background: #f0f2f5;
+    width: 100%;
+    height: 922px;
+    margin-bottom: -60px;
+    overflow: hidden;
+}
+.section_tab{
+    width: 196px;
+    height: 853px;
+    background: #fff;
+    margin-left: 175px;
+    margin-top: 40px;
+    float: left;
+}
+.section_tab li{
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #5c5c5c;
+    text-align: center;
+}
+.section_tab li.active{
+    background: #15dc67;
+    color: #fff;
+}
+.section_count{
+    width: 739px;
+    height: 853px;
+    margin-top: 40px;
+    margin-left: 20px;
+    float: left;
+    background: #fff;
+}
+.section_count .count{
+    width: 739px;
+    height: 853px;
+    display: none;
+}
+.section_count .count img{
+    width: 100%;
+    height: 100%;
+}
+.section_count .count.active{
+    display: block;
+}

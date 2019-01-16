@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="img/KV34BOLEpn.png"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<title>文艺范, 就是这个范儿</title>
+	</head>
+	<body>
+		<div class="all">
+			<img src="img/Snip20170920_10.png" alt="" class="inputs-one">
+			<img src="img/slogan_9a3eba0.png" alt="" class="inputs-two">
+			<div class="frame">
+				<div class="inputs">
+					<input type="text"  placeholder="用户名" class="username">
+					<i>*</i>
+				</div>
+				<div class="inputs pass">
+					<input type="password" placeholder="密码" class="password">
+					<i>*</i>
+				</div>
+				<div class="inputs">
+					<input type="text" placeholder="手机验证码" class="inputs-three">
+					<b>|</b>
+					<span>获取验证码</span>
+					<i>*</i>
+				</div>
+				<div class="agree">
+					<input type="checkbox" onclick="if (this.checked) {enable()} else {disable()}">
+					<span>我已阅读或同意<b>用户协议和隐私条款</b></span>
+				</div>
+				<div class="btn">
+					<button id="accept"  disabled="true">登录</button>
+				</div>
+				<div class="share">
+					<img src="img/tb.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/interface.js"></script>
+	<script src="lib/layer/layer.js"></script>
+	<script type="text/javascript">
+		var username = document.querySelector(".username")
+		console.log(username)
+		var password = document.querySelector(".password")
+		var btn = document.querySelector(".btn button")
+		var inpt = document.querySelector(".inputs")
+		var pass = document.querySelector(".pass")
+
+		function disable(){
+		  	document.getElementById("accept").disabled=true
+		 }
+		function enable(){
+		  document.getElementById("accept").disabled=false
+		 }
+
+		$(".username").change(function(){
+			if((/^[a-zA-Z][a-zA-Z0-9]{3,15}$/).test(username.value) == false){
+				layer.alert("用户名不正确");
+		   	 		return false;
+			}
+			return true;
+		})
+		$(".password").change(function(){
+			if((/^[a-zA-Z0-9]{4,10}$/).test(password.value) == false){
+				layer.alert("密码不正确");
+		   	 		return false;
+			}
+			return true;
+		})
+		$('.btn button').click(function(){
+	  		if(username.value==""){
+	  			alert("请输入正确账号")
+	  			return false
+	  		}else if (password.value=="") {
+	  			alert("请输入正确密码")
+	  			return
+	  		}
+	  		downloadData();
+		});
+
+
+		function downloadData () {
+			var url = loginUrl+"&username="+username.value+"&password="+password.value
+			console.log(username.value)
+			console.log("url="+url)
+			$.getJSON(url,function(res) {
+				console.log(res)
+				if(res.code){
+					console.log(1)
+					localStorage.isLogin = "1"
+					localStorage.loginTime =  Date.now()
+					localStorage.token = res.token
+					localStorage.user = JSON.stringify(res.data)
+					alert("登录成功!");
+					location.href = "collect.html"
+				}else{
+					console.log(2)
+					alert(res.desc)
+				}
+			})
+
+		};
+
+
+	</script>
+</html>

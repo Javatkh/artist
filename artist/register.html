@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="img/KV34BOLEpn.png"/>
+		<link rel="stylesheet" type="text/css" href="css/reg.css"/>
+		<title>文艺范, 就是这个范儿</title>
+	</head>
+	<body>
+		<div class="all">
+			<img src="img/Snip20170920_10.png" alt="" class="inputs-one">
+			<img src="img/slogan_9a3eba0.png" alt="" class="inputs-two">
+			<div class="frame">
+				<div class="inputs">
+					<input type="text" placeholder="用户名" class="username">
+				</div>
+				<div class="inputs">
+					<input type="password" placeholder="密码" class="password">
+				</div>
+				<div class="inputs">
+					<input type="password" placeholder="确认密码" class="arginpassword" > 
+				</div>
+				<div class="inputs">
+					<input type="text" placeholder="手机号码" class="phone" >
+				</div>
+				<div class="inputs">
+					<input type="text" placeholder="昵称" class="nickname" >
+				</div>
+				<div class="agree">
+					<input type="checkbox" onclick="if (this.checked) {enable()} else {disable()}">
+					<span>我已阅读或同意<b>用户协议和隐私条款</b></span>
+				</div>
+				<div class="btn">
+					<button id="accept"  disabled="true">注册</button>
+				</div>
+				<div class="share">
+					<img src="img/tb.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/interface.js"></script>
+	<script src="lib/layer/layer.js"></script>
+	<script>
+		var username = document.querySelector(".username")
+		var password = document.querySelector(".password")
+		var arginpassword = document.querySelector(".arginpassword")
+		var phone = document.querySelector(".phone")
+		var nickname = document.querySelector(".nickname")
+		var btn = document.querySelector(".btn button")
+		var i = document.querySelector(".inputs i")
+		var inpt = document.querySelector(".inputs")
+
+		$('.btn button').click(function(){
+	  		if(username.value==""){
+	  			layer.alert("请输入用户名")
+	  			return
+	  		}else if (password.value=="") {
+	  			layer.alert("请输入密码")
+	  			return
+	  		}else if (arginpassword.value=="") {
+	  			layer.alert("请再次输入密码")
+	  			return
+	  		}else if (nickname.value=="") {
+	  			layer.alert("请输入昵称")
+	  			return
+	  		}
+	  		downloadData();
+		});
+		function disable(){
+		  	document.getElementById("accept").disabled=true
+		 }
+		function enable(){
+		  document.getElementById("accept").disabled=false
+		 }
+		$(".username").change(function(){
+			if((/^[a-zA-Z][a-zA-Z0-9]{3,15}$/).test(username.value) == false){
+				layer.alert("用户名不正确");
+		   	 		return false;
+			}
+			return true;
+		})
+		$(".password").change(function(){
+			if((/^[a-zA-Z0-9]{4,10}$/).test(password.value) == false){
+				layer.alert("密码不正确");
+		   	 		return false;
+			}
+			return true;
+		})
+		$(".arginpassword").change(function(){
+			if((/^[a-zA-Z0-9]{4,10}$/).test(password.value) == false){
+				layer.alert("密码不正确");
+		   	 		return false;
+			}else if (password.value != arginpassword.value ) {
+		     	layer.alert("密码不一致");
+		     }
+			return true;
+		})
+		$(".phone").change(function(){
+			if((/^1\d{10}$/).test(phone.value) == false){
+				layer.alert("电话不正确");
+		   	 		return false;
+			}
+			return true;
+		})
+		
+
+		function downloadData () {
+			var url = registerUrl+"&username="+username.value+"&password="+password.value+"&nickname="+nickname.value+"&phone="+phone.value
+			console.log("url="+url)
+			$.getJSON(url,function(res) {
+				console.log(res)
+				if(res.code){
+					console.log(1)
+				alert("注册成功!");
+					location.href = "login.html"
+				}else{
+					console.log(2)
+					layer.alert(res.desc)
+				}
+			})
+			
+		};
+	</script>
+</html>

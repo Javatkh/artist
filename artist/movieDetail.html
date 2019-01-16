@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文艺范, 就是这个范儿</title>
+	<link rel="shortcut icon" href="img/KV34BOLEpn.png"/>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/paging.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/allDetail.css">
+</head>
+<body>
+	<!-- 头部 区域-->
+	<div class="header-area">
+		<div class="header">
+			<div class="header-left">
+				<a href="javascript:;">文艺范</a>
+				<a href="javascript:;">招商加盟</a>
+				<a href="javascript:;">IOS客户端</a>
+				<a href="javascript:;">Android客户端</a>
+				<a href="javascript:;">联系我们</a>
+				<a href="javascript:;">
+					<img class="header-phone" src="img/phone.png" alt="">
+					4008-900-800
+				</a>
+			</div>
+			<div class="header-right">
+				<a href="collect.html">个人主页</a>
+				<a href="./login.html" target="_blank" class="login">登录</a>
+                <a href="./register.html" target="_blank" class="reg">注册</a>
+			</div>
+		</div>
+	</div>
+	<!-- navbar 区域 -->
+	<div class="navbar-area">
+		<div class="navbar">
+			<div class="navbar-left">
+				<div class="logo-mask">
+					<div class="logo">
+						<a href="index.html"><img src="img/logo.png" alt=""></a>
+					</div>
+				</div>
+				<div class="change-city">
+					<div class="city-logo"></div>
+					<div class="city">
+						<span>北京</span>
+						<a href="javascript:;">【切换城市】</a>
+					</div>
+				</div>
+			</div>
+			<div class="navbar-center">
+				<a href="index.html">首页</a>
+				<a href="read.html">阅读<span><img src="img/n.png" alt=""></span></a>
+				<a href="music.html">音乐</a>
+				<a href="movie.html" class="index-avtive">影视</a>
+				<a href="shopping.html">商品</a>
+			</div>
+			<div class="navbar-right">
+                <input id="search_inp" onchange="doChange()" type="text" placeholder="请输入查找的内容">
+                <a href="search.html"><img onclick="doChange()" src="img/nav-search.png" alt=""></a>
+            </div>
+		</div>
+	</div>
+	<!-- 电影详情区域 -->
+	<div class="content-area">
+		<div class="content">
+			<div class="position">
+				当前位置：<a href="index.html">首页</a>><a href="movie.html">影视</a>>查看内容
+			</div>
+			<!-- 内容 左侧 区域 -->
+			<div class="content-left">
+				<div class="content-left-title-area">
+					<div class="content-left-title-img">
+						<img src="img/tx.jpg" alt="">
+					</div>
+					<div class="content-left-title">
+						<div class="content-left-title-top-box">
+							<div class="content-left-title-top">
+								<span></span>
+								<span></span>
+							</div>
+							<div class="collect-good-content">
+								<div class="collect"> 
+									<span>收藏: </span> 
+									<img src="img/no_bubble_collect.png" alt="" />
+								</div>
+								<div class="good"> 
+									<span>点赞: </span> 
+									<img src="img/no_bottom_laud_default.png" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="content-left-title-bottom">
+							<span></span>
+							<span>|</span>
+							<span>有<i></i>位朋友查看</span>
+						</div>
+					</div>
+				</div>
+				<div class="content-left-share-area">
+					<div class="content-left-share-title">
+						独乐乐不如众乐乐，若喜欢，请推荐给您的朋友。我要分享到：
+					</div>
+					<div class="content-left-share">
+						<div class="bdsharebuttonbox">
+							<a href="#" class="bds_more" data-cmd="more"></a>
+							<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+							<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+							<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+							<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+							<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+							<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+						</div>
+					</div>
+					
+				</div>
+				<div class="video-area">
+					<video class="video" src="" controls="controls"></video>
+				</div>
+				<div class="video-info-area">
+					<div class="video-info-area-title">
+						影片信息
+					</div>
+					<div class="video-info-area-content">
+						
+					</div>
+					<div class="video-info-button">
+						<div class="previous">
+							上一篇：<span></span>
+						</div>
+						<div class="next">
+							下一篇：<span></span>
+						</div>
+					</div>
+				</div>
+				<!-- 添加评论 -->
+				<div class="discuss">
+					<textarea name="" cols="30" rows="10" placeholder="在这里写下你想说的" autofocus></textarea>
+					<div class="btn-area">
+						<span class="textarea-number">500</span>
+						<div class="btns">
+							<button class="cancel-discuss-button">取消</button>
+							<button class="discuss-button">发布</button>				
+						</div>
+					</div>
+				</div>
+				<!-- 评论列表 -->
+				<div class="discuss-list">
+					<div class="discuss-list-title">
+						<span>评论列表</span>
+					</div>
+					<ul>
+						<div class="no-discuss">
+							现在还没有评论,您可以发表评论!
+						</div>
+						<li class="discuss-list-content">
+							<!-- <div class='user-info'>
+								<div class="headPic">
+									<img :src="item.image?netif.imagePrefix+item.image:''">
+									<span>{{item.username}}</span>
+								</div>
+								<span>{{item.create_time}}</span>
+							</div>
+							<div class="comment-message">
+								{{item.comment}}
+							</div> -->
+						</li>
+					</ul>
+				</div>
+				<div class="list_pagination">
+					<div class="box1" id="box"></div>
+				</div>
+			</div>
+			<!-- 内容 右侧 区域 -->
+			<div class="content-right">
+				<div class="recommend-title">
+					<span>推荐图文</span>
+					<span>&nbsp;</span>
+				</div>
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+						<!-- <div class="recommend-img">
+							<img src="img/defaultpic.gif" alt="">
+							<div class="recommend-img-title">
+								<span>昨日花园 作者/三三</span>
+								<span>文章</span>
+							</div>
+						</div> -->
+				    </div>
+				</div>
+				<!-- 排行选项卡 -->
+				<div class="ranking">
+					<div class="ranking-button">
+						<span>周排行</span>
+						<span>月排行</span>
+						<span>总排行</span>
+					</div>
+					<div class="ranking-list">
+						<div class="ranking-list-content ranking-week-content">
+							<!-- <div class="ranking-week">
+								<span>1</span>
+								<span>而非打开附件打开</span>
+							</div> -->
+						</div>
+						<div class="ranking-list-content ranking-month-content"></div>
+						<div class="ranking-list-content ranking-all-content"></div>
+					</div>
+				</div>
+				<!-- 随机推荐 -->
+				<div class="random">
+					<div class="recommend-title">
+						<span>随机推荐</span>
+						<span>&nbsp;</span>
+					</div>
+					<div class="random-comtent">
+						<!-- <div class="recommendation">
+							<div class="recommendation-title">
+								<span>我我我</span>
+								<span>作者/你你你</span>
+							</div>
+							<div class="recommendation-content">
+								妮妮哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇
+							</div>
+						</div>-->				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer 区域 -->
+	<div class="footer-area">
+		<div class="footer">
+			<div class="footer-title">文艺范</div>
+			<div class="about">
+				<a href="about.html">关于</a>|
+				<a href="javascript:;">用户协议</a>|
+				<a href="javascript:;">联系我们</a>
+			</div>
+			<div class="website-title">本站为文艺范官方网站</div>
+			<div class="icp-title">浙ICP备1500041号</div>
+		</div>
+	</div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/interface.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/paging.js"></script>
+	<script src="js/swiper.min.js"></script>
+
+	<script>
+
+		//电影详情数据
+		function downData(){
+
+			
+			var id = sessionStorage.id;
+			var url = movieDetailUrl;
+			if(id == ''){
+				if(window.location.search != ''){
+					url = movieDetailUrl+window.location.search
+				}else{
+					return
+				}
+			}else{
+				url = movieDetailUrl+"&id="+id
+			}
+			if(localStorage.isLogin == "1"){
+				var user = JSON.parse(localStorage.user)
+				if(user == ''){
+
+				}else{
+					url += '&userId='+user.id
+				}
+				
+			}
+			$.getJSON(url,{},function(response){
+				var collect = $('.collect img')
+				var good = $('.good img')
+				var item = response.data;
+				if(item.is_collect == 0){
+					collect.attr('src','img/no_bubble_collect.png')
+				}else{
+					collect.attr('src','img/bubble_collected.png')
+				};
+				if(item.is_good == 0){
+					good.attr('src','img/no_bottom_laud_default.png')
+				}else{
+					good.attr('src','img/bottom_laud_selected.png')
+				}
+
+
+
+				$(".video").attr("src",imagePrefix+item.media_url)
+				
+				$(".content-left-title-top span:nth-of-type(1)").html(item.title)
+				$(".content-left-title-top span:nth-of-type(2)").html("作者/"+item.author_name)
+				$(".content-left-title-bottom span:nth-of-type(1)").html("发布时间："+item.post_date)
+				$(".content-left-title-bottom i").html(item.like_count)
+
+				$(".video-info-area-content").html(item.info)
+
+				if(response.pre == ""){
+					$(".previous span:nth-of-type(1)").html(`<span style=color:#ccc;cursor:default>没有了</span>`)
+					
+				}else{
+					$(".previous span:nth-of-type(1)").html(response.pre[0].title)
+					$(".previous").attr("id",response.pre[0].id)
+				}				
+
+				if(response.next == ""){
+					$(".next span:nth-of-type(1)").html(`<span style=color:#ccc;cursor:default>没有了</span>`)
+					
+				}else{
+					$(".next span:nth-of-type(1)").html(response.next[0].title)
+					$(".next").attr("id",response.next[0].id)
+				}
+				
+				//绑定点击
+				$(".video-info-button>div").on("click", function(event) {
+					var id = event.currentTarget.id
+					console.log("id = " + id)
+					if(id != ''){
+						sessionStorage.id = id
+						location.href = "movieDetail.html"
+					}else{
+
+					}
+
+					
+				})
+
+
+				//收藏
+				collect.on('click',function(){
+					if(localStorage.isLogin != '1'){
+						var r = confirm("需要登录，是否跳转到登录界面?")
+						if(r){
+							location.href = "login.html"
+						}
+						return
+					}
+					if(item.title == undefined){
+						alert("数据加载中,请稍后")
+						return
+					}
+					var user = JSON.parse(localStorage.user)
+
+					if(item.is_collect == 0){
+						var url = saveFavoriteUrl
+						+"&userId="+user.id
+						+"&itemId="+item.id
+						+"&type="+item.category
+						+"&token="+localStorage.token
+						 
+						console.log(url)
+
+						$.getJSON(url,{},function(response){
+							var rd = response
+							if(rd.code == 1){
+								collect.attr('src','img/bubble_collected.png')
+								item.is_collect = 1
+								alert('收藏成功')
+							}else{
+								console.log(rd.desc)
+							}
+						})
+
+					}else{
+						var url = cancelFavoriteUrl
+						+"&userId="+user.id
+						+"&itemId="+item.id
+						+"&type="+item.category
+						+"&token="+localStorage.token
+
+						console.log(url)
+
+						$.getJSON(url,{},function(response){
+							var rd = response
+							if(rd.code == 1){
+								collect.attr('src','img/no_bubble_collect.png')
+								item.is_collect = 0
+							}else{
+								console.log(rd.desc)
+							}
+						})
+					}
+				})
+
+
+
+				//点赞
+				good.on('click',function(){
+					if(localStorage.isLogin != '1'){
+						var r = confirm("需要登录，是否跳转到登录界面?")
+						if(r){
+							location.href = "login.html"
+						}
+						return
+					}
+					if(item.title == undefined){
+						alert("数据加载中,请稍后")
+						return
+					}
+					var user = JSON.parse(localStorage.user)
+					if(item.is_good == 0){
+						var url = addGoodUrl
+						+"&userId="+user.id
+						+"&itemId="+item.id
+						+"&token="+localStorage.token
+						
+						console.log(url)
+
+						$.getJSON(url,{},function(response){
+							var rd = response
+							if(rd.code == 1){
+								good.attr('src','img/bottom_laud_selected.png')
+								item.is_good = 1
+								alert('点赞成功')
+							}else{
+								console.log(rd.desc)
+							}
+						})
+
+					}else{
+						var url = cancelGoodUrl
+						+"&userId="+user.id
+						+"&itemId="+item.id
+						+"&token="+localStorage.token
+
+						console.log(url)
+
+						$.getJSON(url,{},function(response){
+							var rd = response
+							if(rd.code == 1){
+								good.attr('src','img/no_bottom_laud_default.png')
+								item.is_good = 0
+							}else{
+								console.log(rd.desc)
+							}
+						})
+					}
+				})
+
+
+				// 评论
+				var textarea = $('textarea')
+				textarea.on('input',function(){ 
+					if($(this).val().length >= 500){
+						$(this).attr("disabled",'disabled')
+
+					}else{
+						$(this).removeAttr("disabled")
+					}
+					$('.textarea-number').html(500 - $(this).val().length) 
+				})
+				//取消评论
+				var cancelDiscussButton = $('.cancel-discuss-button')
+				cancelDiscussButton.on('click',function(){
+					textarea.val('')
+					$('.textarea-number').html(500) 
+				}) 
+				//评论按钮
+				var discussButton = $('.discuss-button')
+				discussButton.on('click',function(){
+					if(localStorage.isLogin != '1'){
+						var msg = confirm("您还没有登录,是否跳转到登录页")
+						if(msg){
+							location.href = "login.html"
+						}
+						return
+					}
+					if(textarea.val() == ''){
+						alert("请输入内容")
+						return
+					}
+					var user = JSON.parse(localStorage.user);
+					var url = addCommentUrl 
+					+ '&userId=' + user.id 
+					+ '&itemId=' + item.id 
+					+ '&comment=' + textarea.val()
+					+'&token='+localStorage.token;
+					$.getJSON(url,{},function(response){
+						var rd = response
+						if(rd.code == 1){
+							alert('发布成功')
+							textarea.val('')
+							dataLoadDiscussList(currentPage)
+							$('.textarea-number').html(500) 
+						}else{
+							console.log(rd.desc)
+						}
+					})
+				});
+				
+				//评论列表
+				var currentPage = 1;
+				var count = 10;
+				var pageCount = 0;
+				function dataLoadDiscussList(page){
+
+					currentPage = page
+
+					var start = (currentPage - 1)*count
+					var url = getCommentUrl 
+					+'&itemId=' + item.id
+					+"&start="+start
+					+"&count="+10
+					+'&token='+localStorage.token;
+					$.getJSON(url,{},function(response){
+						var total = response.total
+						pageCount = Math.ceil(total / count)
+						var list = response.data;
+						if(list.length == 0){
+							$('.no-discuss').show()
+							$('#box').hide()
+						}else{
+							$('.no-discuss').hide()
+							$('#box').show()
+						}
+						var html = ''
+						$(list).each(function(index,ele){
+							html += `<div class='user-info'>
+										<div class="headPic">
+											<img src="${imagePrefix}${ele.image}">
+											<span>${ele.username}</span>
+										</div>
+										<span>${ele.create_time}</span>
+									</div>
+									<div class="comment-message">
+										${ele.comment}
+									</div>`
+							$('.discuss-list-content').html(html)
+						})
+
+
+						//分页
+						$('#box').paging({
+						    initPageNo: currentPage, // 初始页码
+						    totalPages: pageCount, //总页数
+						    slideSpeed: 600, // 缓动速度。单位毫秒
+						    // jump: true, //是否支持跳转
+						    callback: function(page) { // 回调函数
+						    	if(page == currentPage){
+									return
+								}
+						        dataLoadDiscussList(page)
+						    }
+						});
+						
+					
+					})
+				}
+				dataLoadDiscussList(currentPage)
+				
+				//轮播图数据
+				function downLoadRecommendListUrl() {
+		
+					var url = recommendListUrl
+		
+					$.getJSON(url,function(response) {
+		
+						var list = response.data;
+						
+						var pageName ="" 
+						
+						var html = ""
+						for(var index in list) {
+							var item = list[index];
+							var pageType = ''
+							if (item.category == '1') {
+								pageType = "阅读"
+							} else if (list[index].category == '4') {
+								pageType = "音乐"
+							} else if (list[index].category == '5') {
+								pageType = "影视"
+							}
+		
+							html += `<div class="recommend-img swiper-slide">
+										<img id="${item.id}" src="${imagePrefix}${item.img_url}" alt="">
+										<div class="recommend-img-title">
+											<span class='randm-list-title'>${item.title}</span>
+											<span>${pageType}</span>
+										</div>
+									</div>`
+						}
+		
+						$(".swiper-wrapper").html(html)
+		
+						var itemList = $(".swiper-wrapper img")
+						itemList.each(function(index,ele){
+							$(ele).on("click",function(){
+								event.stopPropagation();
+								if (list[index].category == '1') {
+									pageName = "readDetail.html"
+								} else if (list[index].category == '4') {
+									pageName = "musicDetail.html"
+								} else if (list[index].category == '5') {
+									pageName = "movieDetail.html"
+								}
+							})
+						})
+						//绑定点击
+						$(".swiper-wrapper img").on("click", function(event) {
+							event.stopPropagation();
+							var id = event.currentTarget.id
+							sessionStorage.id = id
+							location.href = pageName
+						})
+		
+		
+						// 轮播图
+						var swiper = new Swiper('.swiper-container', {
+							loop: true,
+							autoplay: {
+								delay: 2500,
+								disableOnInteraction: false
+							}
+						});
+		
+					})
+		
+		
+				}
+				downLoadRecommendListUrl()
+				
+			})
+		}
+		downData()
+
+
+		
+		// 百度分享 
+		window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","sqq","tqq","renren"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","sqq","tqq","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+
+
+
+		
+
+
+		
+
+	
+
+
+		
+	
+
+	</script>
+	
+</body>
+</html>
+
+
+
+

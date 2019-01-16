@@ -1,0 +1,94 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.all{
+	width: 100%;
+	height: 685px;
+	position: relative;
+}
+.all .inputs-one{
+	width: 100%;
+	height: 676px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	position: relative;
+}
+.all .inputs-two{
+	width:600px;
+	position: absolute;
+	left:50%;
+	top: 10px;
+	margin-left: -300px;
+}
+.all .frame{
+	width: 400px;
+	height: 450px;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	margin-left: -200px;
+	padding: 33px 54px;
+	box-sizing: border-box;
+}
+.all .frame .inputs{
+	width: 100%;
+	height: 44px;
+	border: 1px solid #e9e9e9;
+	margin-bottom: 8px;
+	/* line-height: 44px; */
+}
+.all .frame .inputs input{
+	width: 100%;
+	height: 100%;
+	border: 0;
+	outline: 0;
+	font-size: 16px;
+	color: #000;
+	padding-left: 10px;
+	box-sizing: border-box;
+} 
+.all .frame .inputs .inputs-three{
+	width: 65%;height: 100%;
+}
+::-webkit-input-placeholder {
+    color:#E9E9E9;
+}
+.all .frame .inputs b{
+	font-weight: normal;
+	font-size: 16px;
+}
+.all .frame .inputs span{
+	font-size: 16px;
+	color: blue;
+}
+.agree input{
+	vertical-align: middle;
+}
+.agree{
+	font-size: 12px;
+}
+.agree b{
+	color: blue;
+	font-weight: normal;
+}
+.btn{
+	width: 100%;
+	height: 47px;
+	margin: 10px 0;
+}
+.btn button{
+	width: 100%;
+	height: 100%;
+	outline: 0;
+	border: 0;
+	background: #f85959;
+	color: #fff;
+	font-size: 16px;
+}
+.share img{
+	width: 100%;
+	height: 65px
+}
